@@ -66,6 +66,13 @@ browser-act --session costco-reviews wait stable --timeout 60000
 browser-act --session costco-reviews eval "$(python scripts/scrape-reviews.py --product-url "{product-url}" --max-reviews 2)"
 ```
 
+PowerShell form:
+
+```powershell
+$js = python scripts/scrape-reviews.py --product-url "{product-url}" --max-reviews 2
+browser-act --session costco-reviews eval "$js"
+```
+
 The sample scrape should return `ok: true`, `total_reviews_reported`, and `unique_reviews_scraped` equal to the requested sample size unless the product has fewer reviews.
 
 4. Optional visual verification: if the user specifically asks to open the Costco PDP, click `Member Reviews`, or compare against the visible page, navigate the same chrome session to the product page and inspect the review widget:
@@ -95,6 +102,13 @@ Command:
 
 ```bash
 browser-act --session costco-reviews eval "$(python scripts/scrape-reviews.py --product-url "{product-url}" --reviews-mode all)"
+```
+
+PowerShell form:
+
+```powershell
+$js = python scripts/scrape-reviews.py --product-url "{product-url}" --reviews-mode all
+browser-act --session costco-reviews eval "$js"
 ```
 
 Save the JSON output when the task asks for a file:
@@ -150,6 +164,13 @@ Command:
 
 ```bash
 browser-act --session costco-reviews eval "$(python scripts/scrape-reviews.py --product-url "{product-url}" --reviews-mode text-only)"
+```
+
+PowerShell form:
+
+```powershell
+$js = python scripts/scrape-reviews.py --product-url "{product-url}" --reviews-mode text-only
+browser-act --session costco-reviews eval "$js"
 ```
 
 Output differences:

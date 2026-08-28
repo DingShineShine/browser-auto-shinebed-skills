@@ -71,6 +71,13 @@ browser-act --session chewy-reviews wait stable --timeout 60000
 browser-act --session chewy-reviews eval "$(python scripts/scrape-reviews.py --product-url "{product-url}" --page-size 5 --max-pages 1)"
 ```
 
+PowerShell form:
+
+```powershell
+$js = python scripts/scrape-reviews.py --product-url "{product-url}" --page-size 5 --max-pages 1
+browser-act --session chewy-reviews eval "$js"
+```
+
 The sample should return `ok: true`, a resolved `review_part_number`, and a non-empty `reviews` array when the product has public reviews.
 
 ## Capability Components
@@ -81,6 +88,13 @@ Command:
 
 ```bash
 browser-act --session chewy-reviews eval "$(python scripts/scrape-reviews.py --product-url "{product-url}" --reviews-mode all)"
+```
+
+PowerShell form:
+
+```powershell
+$js = python scripts/scrape-reviews.py --product-url "{product-url}" --reviews-mode all
+browser-act --session chewy-reviews eval "$js"
 ```
 
 Save the JSON output when the task asks for a file:
@@ -140,6 +154,13 @@ Command:
 
 ```bash
 browser-act --session chewy-reviews eval "$(python scripts/scrape-reviews.py --product-url "{product-url}" --reviews-mode text-only)"
+```
+
+PowerShell form:
+
+```powershell
+$js = python scripts/scrape-reviews.py --product-url "{product-url}" --reviews-mode text-only
+browser-act --session chewy-reviews eval "$js"
 ```
 
 Output differences:
