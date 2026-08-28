@@ -1,10 +1,23 @@
 # browser-auto-shinebed-skills
 
-Public discovery Skill for installing the Shinebed AdsPower bridge wrapper for `browser-act`.
+Public Codex Skills for the Shinebed `browser-act` wrapper and reusable browser
+automation workflows.
 
-This repository is intentionally thin. It contains the installable Skill entrypoint and Forge Mode reference docs, but not the Python implementation, tests, reports, screenshots, generated Skills, or development artifacts. The full implementation stays in the private development repository.
+This repository is intentionally thin. It contains installable Skill entrypoints,
+Forge Mode reference docs, and selected public workflow Skills, but not the
+Python implementation, tests, reports, screenshots, downloaded files, private
+upload flows, or development artifacts. The full implementation stays in the
+private development repository.
 
-## Install
+## Available Skills
+
+| Skill | Purpose | Install URL |
+| --- | --- | --- |
+| `browser-auto-shinebed` | Installs and verifies the AdsPower bridge wrapper for `browser-act`; includes Forge references. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/browser-auto-shinebed` |
+| `costco-product-reviews-scrape` | Scrapes public Costco product reviews through browser-act chrome mode and Bazaarvoice. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/costco-product-reviews-scrape` |
+| `chewy-product-reviews-scrape` | Scrapes public Chewy product reviews through browser-act chrome mode and Chewy GraphQL. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/chewy-product-reviews-scrape` |
+
+## User Install Flow
 
 Tell your AI agent:
 
@@ -15,6 +28,30 @@ https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/browser
 
 After installation, verify the wrapper and read the Forge references from the installed Skill.
 ```
+
+Then install one workflow Skill:
+
+```text
+Install Costco product reviews scraping:
+https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/costco-product-reviews-scrape
+```
+
+or:
+
+```text
+Install Chewy product reviews scraping:
+https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/chewy-product-reviews-scrape
+```
+
+Start a new task or next turn after installation, then ask naturally:
+
+```text
+Scrape all Costco reviews for this product and save the result as JSON:
+https://www.costco.com/...
+```
+
+If a Skill is already installed, ask the agent to replace the local Skill folder
+with the latest GitHub version and install again from the same URL.
 
 ## What the Skill Does
 
@@ -50,5 +87,10 @@ browser-auto-shinebed/SKILL.md
 browser-auto-shinebed/references/forge-extraction.md
 browser-auto-shinebed/references/forge-operation.md
 browser-auto-shinebed/references/forge-output-template.md
+costco-product-reviews-scrape/SKILL.md
+costco-product-reviews-scrape/scripts/scrape-reviews.py
+costco-product-reviews-scrape/scripts/inspect-costco-review-page.py
+chewy-product-reviews-scrape/SKILL.md
+chewy-product-reviews-scrape/scripts/scrape-reviews.py
 .gitignore
 ```

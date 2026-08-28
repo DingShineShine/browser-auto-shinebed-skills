@@ -5,6 +5,13 @@ Thumbs.db
 .env.*
 
 tmp/
+output/
 dist/
 build/
 *.egg-info/
+__pycache__/
+*.pyc
+*.inspect.ndjson
+*.pptx
+*.xlsx
+*.csv

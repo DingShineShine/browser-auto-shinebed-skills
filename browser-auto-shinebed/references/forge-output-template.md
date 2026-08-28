@@ -113,11 +113,6 @@ Use quantifiable criteria such as result count, required field completeness, res
 
 Only list limitations observed during exploration.
 
-## Experience Notes
-
-Path: `{working-directory}/browser-act-skill-forge-memories/{skill-name}-{capability-name}.memory.md`
-
-Read the file before execution if it exists. Append only unexpected execution discoveries, not task results.
 ```
 
 Delete unused component sections from the generated Skill. Do not leave template placeholders.
@@ -169,3 +164,4 @@ if __name__ == "__main__":
 - Do not include real customer data, credentials, AdsPower profile ids, or one-off exploration inputs.
 - Do not mention source scraper products or competitor tools in generated Skill names or descriptions.
 - Include enough output examples for future agents to understand the data shape.
+- Do not include local Forge memory paths, authoring notes, screenshots, reports, downloaded files, or other task artifacts in generated public Skills.
