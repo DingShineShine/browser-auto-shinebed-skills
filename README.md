@@ -23,10 +23,10 @@ The public Skill asks the agent to run:
 ```bash
 uv tool install --force browser-auto-shinebed --python 3.12
 browser-act doctor
-browser-act get-skills browser-auto-shinebed --skill-version 0.1.4
+browser-act get-skills browser-auto-shinebed --skill-version 0.1.5
 ```
 
-`browser-act get-skills browser-auto-shinebed` prints the complete AdsPower, local assist, and Forge Mode instructions from the installed package, so the guide stays aligned with the CLI version.
+`browser-act get-skills browser-auto-shinebed` prints the complete AdsPower and Forge Mode instructions from the installed package, so the guide stays aligned with the CLI version.
 
 ## Repository Contents
 
