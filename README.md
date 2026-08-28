@@ -16,6 +16,7 @@ private development repository.
 | `browser-auto-shinebed` | Installs and verifies the AdsPower bridge wrapper for `browser-act`; includes Forge references. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/browser-auto-shinebed` |
 | `costco-product-reviews-scrape` | Scrapes public Costco product reviews through browser-act chrome mode and Bazaarvoice. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/costco-product-reviews-scrape` |
 | `chewy-product-reviews-scrape` | Scrapes public Chewy product reviews through browser-act chrome mode and Chewy GraphQL. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/chewy-product-reviews-scrape` |
+| `tiktok-video-comments-scrape` | Scrapes TikTok video comments and replies through browser-act chrome-direct mode and TikTok web comment APIs. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/tiktok-video-comments-scrape` |
 
 ## User Install Flow
 
@@ -43,11 +44,25 @@ Install Chewy product reviews scraping:
 https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/chewy-product-reviews-scrape
 ```
 
+or:
+
+```text
+Install TikTok video comments scraping:
+https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/tiktok-video-comments-scrape
+```
+
 Start a new task or next turn after installation, then ask naturally:
 
 ```text
 Scrape all Costco reviews for this product and save the result as JSON:
 https://www.costco.com/...
+```
+
+or:
+
+```text
+Scrape all comments and replies for this TikTok video and save the result as JSON:
+https://www.tiktok.com/@.../video/...
 ```
 
 If a Skill is already installed, ask the agent to replace the local Skill folder
@@ -92,5 +107,7 @@ costco-product-reviews-scrape/scripts/scrape-reviews.py
 costco-product-reviews-scrape/scripts/inspect-costco-review-page.py
 chewy-product-reviews-scrape/SKILL.md
 chewy-product-reviews-scrape/scripts/scrape-reviews.py
+tiktok-video-comments-scrape/SKILL.md
+tiktok-video-comments-scrape/scripts/scrape-comments.py
 .gitignore
 ```
