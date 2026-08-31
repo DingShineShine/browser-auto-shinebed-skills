@@ -2,8 +2,6 @@
 
 `browser-auto-shinebed` 是 Shinebed 对 `browser-act` 的增强入口。它保留原始 `browser-act` 的命令能力，例如 `state`、`click`、`input`、`eval`、`network`、`wait`、`screenshot` 和文件上传，同时增加 AdsPower 浏览器模式，并用 Forge Mode 帮团队把验证过的网站流程固化成可复用的 Codex Skill。
 
-这个仓库是公开的薄仓库：只放安装入口、Forge references 和精选 workflow skills。完整实现、测试输出、截图、下载文件、客户数据和业务账号信息不放在这里。
-
 ## 浏览器模式
 
 ### chrome-direct
@@ -46,20 +44,6 @@
 - 多店铺、多账号、多地区 profile 的浏览器自动化。
 
 使用方式上，通常只在打开浏览器时指定 AdsPower profile：
-
-```bash
-browser-act --session ads1 browser open adspower:<user_id> https://example.com
-```
-
-会话打开以后，后续页面操作仍然使用正常 `browser-act` 命令：
-
-```bash
-browser-act --session ads1 state
-browser-act --session ads1 click 1
-browser-act --session ads1 eval "..."
-browser-act --session ads1 network requests
-browser-act session close ads1
-```
 
 ## Forge Mode
 
@@ -108,20 +92,3 @@ https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/tiktok-
 ```text
 抓取这个 TikTok 视频的所有评论和回复，并保存成 JSON。
 ```
-
-## 公开边界
-
-这个薄仓库可以公开包含：
-
-- Codex Skill 安装入口。
-- Forge Mode references。
-- 已整理、可复用、可安装的 workflow skills。
-- 不含敏感数据的 helper scripts。
-
-这个薄仓库不应包含：
-
-- 私有 Python 实现源码和开发测试工程。
-- `output/` 下的一次性运行结果。
-- 截图、报告、PPT、下载文件和调试缓存。
-- 客户数据、店铺数据、评论原始导出文件。
-- AdsPower profile id、业务账号、cookie、token、密码或 API key。
