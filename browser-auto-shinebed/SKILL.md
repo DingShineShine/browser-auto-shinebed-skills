@@ -3,7 +3,7 @@ name: browser-auto-shinebed
 description: "Install the Shinebed AdsPower bridge wrapper for browser-act. Use when a user mentions AdsPower, ADS browser, multi-store browser automation, browser-act AdsPower mode, adspower user ids, browser-act bridge, reusable workflow skills, browser-act skill forge, or Forge Mode."
 metadata:
   author: Shinebed
-  version: "0.1.6"
+  version: "0.1.7"
   install: "uv tool install browser-auto-shinebed --python 3.12"
   homepage: "https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/browser-auto-shinebed"
   requires:
