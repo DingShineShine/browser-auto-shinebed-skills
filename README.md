@@ -3,6 +3,8 @@
 Public Codex Skills for the Shinebed `browser-act` wrapper and reusable browser
 automation workflows.
 
+中文产品说明、浏览器模式和 Forge Mode 介绍见 [PRODUCT.md](PRODUCT.md)。
+
 This repository is intentionally thin. It contains installable Skill entrypoints,
 Forge Mode reference docs, and selected public workflow Skills, but not the
 Python implementation, tests, reports, screenshots, downloaded files, private
@@ -98,6 +100,7 @@ git clone --depth 1 https://github.com/DingShineShine/browser-auto-shinebed-skil
 
 ```text
 README.md
+PRODUCT.md
 browser-auto-shinebed/SKILL.md
 browser-auto-shinebed/references/forge-extraction.md
 browser-auto-shinebed/references/forge-operation.md
