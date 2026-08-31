@@ -32,7 +32,7 @@ browser-act doctor
 Then load the wrapper guide from the installed CLI:
 
 ```bash
-browser-act get-skills browser-auto-shinebed --skill-version 0.1.6
+browser-act get-skills browser-auto-shinebed --skill-version 0.1.7
 ```
 
 Use the CLI guide for wrapper verification, AdsPower browser mode, and command
