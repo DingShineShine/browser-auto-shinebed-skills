@@ -19,6 +19,7 @@ private development repository.
 | `costco-product-reviews-scrape` | Scrapes public Costco product reviews through browser-act chrome mode and Bazaarvoice. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/costco-product-reviews-scrape` |
 | `chewy-product-reviews-scrape` | Scrapes public Chewy product reviews through browser-act chrome mode and Chewy GraphQL. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/chewy-product-reviews-scrape` |
 | `tiktok-video-comments-scrape` | Scrapes TikTok video comments and replies through browser-act chrome-direct mode and TikTok web comment APIs. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/tiktok-video-comments-scrape` |
+| `jcp-product-details-scrape` | Scrapes JCPenney PDP product details, prices, inventory, and variants through browser-act AdsPower or proxied sessions. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/jcp-product-details-scrape` |
 
 ## User Install Flow
 
@@ -53,6 +54,13 @@ Install TikTok video comments scraping:
 https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/tiktok-video-comments-scrape
 ```
 
+or:
+
+```text
+Install JCPenney product details scraping:
+https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/jcp-product-details-scrape
+```
+
 Start a new task or next turn after installation, then ask naturally:
 
 ```text
@@ -67,6 +75,13 @@ Scrape all comments and replies for this TikTok video and save the result as JSO
 https://www.tiktok.com/@.../video/...
 ```
 
+or:
+
+```text
+Scrape JCPenney product details and variants for this SKU, then save the result as JSON:
+71010710018
+```
+
 If a Skill is already installed, ask the agent to replace the local Skill folder
 with the latest GitHub version and install again from the same URL.
 
@@ -77,7 +92,7 @@ The public Skill asks the agent to install and verify the wrapper:
 ```bash
 uv tool install --force browser-auto-shinebed --python 3.12
 browser-act doctor
-browser-act get-skills browser-auto-shinebed --skill-version 0.1.6
+browser-act get-skills browser-auto-shinebed --skill-version 0.1.7
 ```
 
 `browser-act get-skills browser-auto-shinebed` prints wrapper and AdsPower command guidance from the installed package. Forge Mode is guided by the public Git Skill references in `browser-auto-shinebed/references/`.
@@ -112,5 +127,11 @@ chewy-product-reviews-scrape/SKILL.md
 chewy-product-reviews-scrape/scripts/scrape-reviews.py
 tiktok-video-comments-scrape/SKILL.md
 tiktok-video-comments-scrape/scripts/scrape-comments.py
+jcp-product-details-scrape/SKILL.md
+jcp-product-details-scrape/scripts/scrape-product-details.py
+jcp-product-details-scrape/scripts/prepare-source.py
+jcp-product-details-scrape/scripts/run-jcp-batch.py
+jcp-product-details-scrape/scripts/prepare-workbook-data.py
+jcp-product-details-scrape/scripts/build-workbook.mjs
 .gitignore
 ```

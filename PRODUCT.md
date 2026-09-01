@@ -69,7 +69,7 @@ output/{skill-name}/{capability-name}/
 - `scripts/*.py` 只负责生成给 `browser-act eval` 执行的浏览器侧 JavaScript，不保存业务数据，也不直接调用 `browser-act`。
 - `output/` 只是本地创作目录。确认可公开发布后，才把整理好的 skill 包挑选进这个薄仓库。
 
-这个仓库里的公开 workflow skills，例如 `costco-product-reviews-scrape`、`chewy-product-reviews-scrape` 和 `tiktok-video-comments-scrape`，就是这种 Forge 产物发布后的形态。
+这个仓库里的公开 workflow skills，例如 `costco-product-reviews-scrape`、`chewy-product-reviews-scrape`、`tiktok-video-comments-scrape` 和 `jcp-product-details-scrape`，就是这种 Forge 产物发布后的形态。
 
 ## 安装方式
 
@@ -85,6 +85,7 @@ https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/browser
 https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/costco-product-reviews-scrape
 https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/chewy-product-reviews-scrape
 https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/tiktok-video-comments-scrape
+https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/jcp-product-details-scrape
 ```
 
 安装完成后，新开任务或在下一轮对话中自然描述需求即可，例如：
