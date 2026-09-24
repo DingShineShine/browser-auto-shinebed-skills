@@ -20,6 +20,7 @@ private development repository.
 | `chewy-product-reviews-scrape` | Scrapes public Chewy product reviews through browser-act chrome mode and Chewy GraphQL. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/chewy-product-reviews-scrape` |
 | `tiktok-video-comments-scrape` | Scrapes TikTok video comments and replies through browser-act chrome-direct mode and TikTok web comment APIs. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/tiktok-video-comments-scrape` |
 | `jcp-product-details-scrape` | Scrapes JCPenney PDP product details, prices, inventory, and variants through browser-act AdsPower or proxied sessions. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/jcp-product-details-scrape` |
+| `pinterest-search-pins` | Scrapes Pinterest keyword search pins and non-comment detail data through a logged-in local Chrome browser. | `https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/pinterest-search-pins` |
 
 ## User Install Flow
 
@@ -61,6 +62,13 @@ Install JCPenney product details scraping:
 https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/jcp-product-details-scrape
 ```
 
+or:
+
+```text
+Install Pinterest search pin scraping:
+https://github.com/DingShineShine/browser-auto-shinebed-skills/tree/main/pinterest-search-pins
+```
+
 Start a new task or next turn after installation, then ask naturally:
 
 ```text
@@ -80,6 +88,12 @@ or:
 ```text
 Scrape JCPenney product details and variants for this SKU, then save the result as JSON:
 71010710018
+```
+
+or:
+
+```text
+Scrape the first 200 Pinterest pins for "Bedding Sheets", exclude comment text, and save the result as JSON.
 ```
 
 If a Skill is already installed, ask the agent to replace the local Skill folder
@@ -133,5 +147,7 @@ jcp-product-details-scrape/scripts/prepare-source.py
 jcp-product-details-scrape/scripts/run-jcp-batch.py
 jcp-product-details-scrape/scripts/prepare-workbook-data.py
 jcp-product-details-scrape/scripts/build-workbook.mjs
+pinterest-search-pins/SKILL.md
+pinterest-search-pins/scripts/scrape-pinterest-pins.py
 .gitignore
 ```
